@@ -66,7 +66,7 @@ function Footer() {
             <div className="pb-4">
               <input
                 type="email"
-                class="w-[65%] py-[0.35rem] px-0 text-slate-100 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                class="w-[65%] py-[0.30rem] px-0 text-slate-100 text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder="Enter email"
                 required
               />
