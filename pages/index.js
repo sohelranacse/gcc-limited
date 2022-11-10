@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
+import Articles from "../components/Articles";
+import FilterSection from "../components/FilterSection";
 import Hero from "../components/Hero"
-
-import { FcAssistant } from "react-icons/fc"
+import Subscription from "../Subscription";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <FilterSection />
+      <Articles />
+      {/* <Subscription /> */}
     </>
   );
 }

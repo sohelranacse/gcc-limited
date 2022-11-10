@@ -9,7 +9,7 @@ function Header() {
     <nav className="w-full fixed top-0 bg-white z-10">
       <div className="container p-5 mx-auto py-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" passHref>
+          <Link href="/">
             <Image
               className="w-20 "
               src="/assets/gcc-logo.svg"
@@ -18,7 +18,7 @@ function Header() {
               height={20}
             />
           </Link>
-          <ul className="hidden md:flex space-x-5 text-gray-700 font-[600] text-sm uppercase ml-20">
+          <ul className="hidden md:flex space-x-5 text-gray-700 font-[600] text-sm uppercase ml-20 tracking-tighter">
             <li>
               <Link
                 href="/company"
@@ -68,7 +68,7 @@ function Header() {
           >
             <AiOutlineGlobal />
           </Link>
-          <ul className="uppercase flex space-x-2 md:space-x-4 text-blue-500 font-bold text-sm">
+          <ul className="uppercase flex space-x-2 md:space-x-4 text-blue-500 font-bold text-sm tracking-tighter">
             <li>
               <Link
                 href="/"
