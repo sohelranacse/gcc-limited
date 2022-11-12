@@ -1,9 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
-import Articles from "../components/Articles";
+import ArticlesSection from "../components/ArticlesSection";
+import BooksSection from "../components/BooksSection";
+import EventSection from "../components/EventSection";
 import FilterSection from "../components/FilterSection";
 import Hero from "../components/Hero"
-import Subscription from "../Subscription";
+import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   return (
@@ -16,8 +17,10 @@ export default function Home() {
 
       <Hero />
       <FilterSection />
-      <Articles />
-      {/* <Subscription /> */}
+      <ArticlesSection />
+      <BooksSection />
+      <EventSection />
+      <Subscribe />
     </>
   );
 }

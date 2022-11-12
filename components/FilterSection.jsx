@@ -26,23 +26,23 @@ function FilterSection() {
             <div className="grid md:grid-cols-5 grid-cols-1 gap-2 my-3 justify-between">
               <select className="border border-solid border-slate-400 rounded-sm py-3 px-6">
                 <option value="">Featured topics</option>
-                <option value="1">Topics1</option>
+                <option value="1">Topics 1</option>
               </select>
               <select className="border border-solid border-slate-400 rounded-sm py-3 px-6 ">
-                <option value="">Featured topics</option>
-                <option value="1">Topics1</option>
+                <option value="">Type</option>
+                <option value="1">Type 1</option>
               </select>
               <select className="border border-solid border-slate-400 rounded-sm py-3 px-6 ">
-                <option value="">Featured topics</option>
-                <option value="1">Topics1</option>
+                <option value="">Category</option>
+                <option value="1">Category 1</option>
               </select>
               <select className="border border-solid border-slate-400 rounded-sm py-3 px-6 ">
-                <option value="">Featured topics</option>
-                <option value="1">Topics1</option>
+                <option value="">Trending topics</option>
+                <option value="1">Trending Topics 1</option>
               </select>
               <select className="border border-solid border-slate-400 rounded-sm py-3 px-6 ">
-                <option value="">Featured topics</option>
-                <option value="1">Topics1</option>
+                <option value="">More filters</option>
+                <option value="1">Filters 1</option>
               </select>
             </div>
             <div className="flex flex-wrap justify-end my-6">
