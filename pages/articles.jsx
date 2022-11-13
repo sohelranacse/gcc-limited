@@ -4,6 +4,8 @@ import Head from "next/head";
 import { RiArrowRightCircleLine } from "react-icons/ri";
 import { FaRegEnvelope, FaMapMarkerAlt, FaRegBookmark } from "react-icons/fa";
 import Image from "next/image";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import RelatedArticles from "../components/RelatedArticles";
 
 export default function articles() {
   return (
@@ -58,11 +60,69 @@ export default function articles() {
               Ipsum has been the industry`s standard dummy text ever since the
               1500s. In publishing and graphic design. Lorem inpus is a
               placeholder text commonly used to demonstrate the visual form of
+              adocument.
+            </p>
+            <p className="text-xs text-slate-700 leading-6 pt-2">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the indistry`s standard dummy text
+              ever since. In publishing and graphic design. Lorem inpus is a
+              placeholder text commonly used to demonstrate the visual form of
               adocument. Lorem Ipsum is simply dummy text of the printing and
               typesetting industry. Lorem Ipsum has been the indistry`s standard
               dummy text ever since.
             </p>
 
+            {/* blockcote */}
+
+            <div className="flex flex-wrap justify-between py-12">
+              <blockquote class="pl-4 my-4 border-l-4 border-sky-500 basis-1/2">
+                <h2 className="text-sky-500 font-bold text-2xl pb-2">
+                  Summary
+                </h2>
+                <p class="text-xs font-bold leading-relaxed text-slate-90">
+                  Lorem Ipsum is simply dummy text of the printing. In
+                  publishing and graphic design, Lorem ipsum is a placeholder
+                  text. To take a trival example, which of us ever undertakes
+                  laborious physical exercise, except to obtain some advantage
+                  from it? But who has any right to find fault with a man who
+                  chooses to enjoy a pleasure that has no annoying cosequences.
+                  Lorem Ipsum is simply dummy text of the printing. In
+                  publishing and graphic design, Lorem ipsum is a placeholder
+                  text.
+                </p>
+              </blockquote>
+              <div className="basis 1/2">
+                <Image
+                  src="https://images.unsplash.com/photo-1596045663166-e5668e9b748e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1794&q=80"
+                  width={300}
+                  height={0}
+                  alt="author image"
+                  className="w-full h-48 rounded-sm"
+                />
+              </div>
+            </div>
+
+            <p className="text-xs text-slate-700 leading-6 pt-4">
+              Lorem Ipsum is simply dummy text of the printing. In publishing
+              and graphic design, Lorem ipsum is a placeholder text commonly
+              used to demonstrate the visual form of a document. Lorem Ipsum is
+              simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry`s standard dummy text ever since the
+              1500s. In publishing and graphic design. Lorem inpus is a
+              placeholder text commonly used to demonstrate the visual form of
+              adocument.
+            </p>
+            <p className="text-xs text-slate-700 leading-6 pt-2">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the indistry`s standard dummy text
+              ever since. In publishing and graphic design. Lorem inpus is a
+              placeholder text commonly used to demonstrate the visual form of
+              adocument. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the indistry`s standard
+              dummy text ever since.
+            </p>
+
+            {/* Article tags */}
             <h3 className="text-md font-bold py-8">Article tags</h3>
             <div className="flex flex-wrap justify-left gap-4">
               <Link
@@ -178,6 +238,34 @@ export default function articles() {
                   <span>Subscribe Now</span>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related articles */}
+        <div className="grid grid-cols-12">
+          <div className="col-span-9 flex flex-wrap justify-between py-28">
+            <h1 className="text-2xl font-bold leading-6 text-slate-800">
+              Related Insights
+            </h1>
+            <div className="flex justify-end text-slate-500">
+              <button type="button">
+                <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
+              </button>
+              <button type="button">
+                <HiChevronRight className="border border-slate-300 h-7 w-7" />
+              </button>
+            </div>
+
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 py-8">
+              <RelatedArticles
+                heading="Yes you can: Build Your Success"
+                image="https://images.unsplash.com/photo-1544736779-08492534e887?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGJvb2slMjBjb3ZlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              />
+              <RelatedArticles
+                heading="A Guidbook to Hiring Freelancers"
+                image="https://images.unsplash.com/photo-1555252586-d77e8c828e41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM1fHxib29rJTIwY292ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              />
             </div>
           </div>
         </div>

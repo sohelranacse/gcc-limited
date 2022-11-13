@@ -21,7 +21,7 @@ function Header() {
           <ul className="hidden md:flex space-x-5 text-gray-700 font-[600] text-sm uppercase ml-20 tracking-tighter">
             <li>
               <Link
-                href="/company"
+                href="/"
                 className="hover:text-gray-500 border-solid border-b-4 border-blue-700 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-linear duration-100"
               >
                 Company
@@ -29,15 +29,15 @@ function Header() {
             </li>
             <li>
               <Link
-                href="/services"
+                href="/articles"
                 className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-linear duration-100 "
               >
-                Services
+                Articles
               </Link>
             </li>
             <li>
               <Link
-                href="/pricing"
+                href="/"
                 className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-liner duration-100"
               >
                 Pricing
@@ -45,7 +45,7 @@ function Header() {
             </li>
             <li>
               <Link
-                href="/resources"
+                href="/"
                 className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-liner duration-100"
               >
                 Resources
@@ -53,7 +53,7 @@ function Header() {
             </li>
             <li>
               <Link
-                href="/enterprise"
+                href="/"
                 className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-linear duration-100"
               >
                 Enterprise
@@ -97,19 +97,19 @@ function Header() {
           className="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center"
         >
           <li className="hover:text-gray-500 leading-8 ">
-            <Link href="/company">Company</Link>
+            <Link href="/">Company</Link>
           </li>
           <li className="hover:text-gray-500 leading-8">
-            <Link href="/services">Services</Link>
+            <Link href="/articles">Articles</Link>
           </li>
           <li className="hover:text-gray-500 leading-8">
-            <Link href="/pricing">Pricing</Link>
+            <Link href="/">Pricing</Link>
           </li>
           <li className="hover:text-gray-500 leading-8">
-            <Link href="/resources">Resources</Link>
+            <Link href="/">Resources</Link>
           </li>
           <li className="hover:text-gray-500 leading-8">
-            <Link href="/enterprise">Enterprise</Link>
+            <Link href="/">Enterprise</Link>
           </li>
         </ul>
       </div>
