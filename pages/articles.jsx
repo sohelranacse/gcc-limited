@@ -18,7 +18,7 @@ export default function articles() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="container mx-auto py-32 px-4">
+      <section className="container mx-auto pt-32 pb-12 px-4">
         <Link
           href="/"
           className="pb-8 flex flex-wrap flex-row justify-left text-slate-600"
@@ -30,7 +30,7 @@ export default function articles() {
         {/* main section */}
         <div className="grid md:grid-cols-12">
           {/* Left */}
-          <div className="md:col-span-9 border-r-2 md:pr-8">
+          <div className="md:col-span-9 md:border-r-2 md:pr-8">
             <Link
               href="/"
               className="uppercase border border-sky-600 bg-sky-600 text-white px-4 py-1 rounded-sm text-xs"
@@ -75,11 +75,11 @@ export default function articles() {
             {/* blockcote */}
 
             <div className="flex flex-wrap justify-between py-12">
-              <blockquote class="pl-4 my-4 border-l-4 border-sky-500 basis-1/2">
+              <blockquote className="pl-4 my-4 border-l-4 border-sky-500 md:basis-1/2">
                 <h2 className="text-sky-500 font-bold text-2xl pb-2">
                   Summary
                 </h2>
-                <p class="text-xs font-bold leading-relaxed text-slate-90">
+                <p className="text-xs font-bold leading-relaxed text-slate-90">
                   Lorem Ipsum is simply dummy text of the printing. In
                   publishing and graphic design, Lorem ipsum is a placeholder
                   text. To take a trival example, which of us ever undertakes
@@ -243,8 +243,8 @@ export default function articles() {
         </div>
 
         {/* Related articles */}
-        <div className="grid grid-cols-12">
-          <div className="col-span-9 flex flex-wrap justify-between py-28">
+        <div className="grid md:grid-cols-12">
+          <div className="md:col-span-9 flex flex-wrap justify-between pt-28 py-12">
             <h1 className="text-2xl font-bold leading-6 text-slate-800">
               Related Insights
             </h1>

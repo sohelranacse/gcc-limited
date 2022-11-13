@@ -1,10 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
-import { AiOutlineGlobal } from "react-icons/ai";
+import { AiOutlineGlobal, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 function Header() {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    console.log(nav);
+    setNav(!nav);
+    console.log(nav);
+  };
+
   return (
     <nav className="w-full fixed top-0 bg-white z-10">
       <div className="container p-5 mx-auto py-6 flex items-center justify-between">
@@ -87,31 +95,55 @@ function Header() {
             </li>
           </ul>
         </div>
-        <div id="hamburger" className="space-y-1 md:hidden cursor-pointer z-20">
-          <div className="w-6 h-0.5 bg-black"></div>
-          <div className="w-6 h-0.5 bg-black"></div>
-          <div className="w-6 h-0.5 bg-black"></div>
+
+        {/* mobile nav */}
+        <div onClick={handleNav} className="block sm:hidden z-10">
+          {nav ? (
+            <AiOutlineClose size={20} className="text-white" />
+          ) : (
+            <AiOutlineMenu size={20} className="text-black" />
+          )}
         </div>
-        <ul
-          id="menu"
-          className="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center"
+        <div
+          className={
+            nav
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-indigo-800 text-center ease-in duration-300"
+              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-indigo-800 text-center ease-in duration-300"
+          }
         >
-          <li className="hover:text-gray-500 leading-8 ">
-            <Link href="/">Company</Link>
-          </li>
-          <li className="hover:text-gray-500 leading-8">
-            <Link href="/articles">Articles</Link>
-          </li>
-          <li className="hover:text-gray-500 leading-8">
-            <Link href="/">Pricing</Link>
-          </li>
-          <li className="hover:text-gray-500 leading-8">
-            <Link href="/">Resources</Link>
-          </li>
-          <li className="hover:text-gray-500 leading-8">
-            <Link href="/">Enterprise</Link>
-          </li>
-        </ul>
+          <ul>
+            <li
+              className="hover:text-gray-300 p-4 text-xl text-slate-50"
+              onClick={handleNav}
+            >
+              <Link href="/">Company</Link>
+            </li>
+            <li
+              className="hover:text-gray-300 p-4 text-xl text-slate-50"
+              onClick={handleNav}
+            >
+              <Link href="/articles">Articles</Link>
+            </li>
+            <li
+              className="hover:text-gray-300 p-4 text-xl text-slate-50"
+              onClick={handleNav}
+            >
+              <Link href="/">Pricing</Link>
+            </li>
+            <li
+              className="hover:text-gray-500 p-4 text-xl text-slate-50"
+              onClick={handleNav}
+            >
+              <Link href="/">Resources</Link>
+            </li>
+            <li
+              className="hover:text-gray-500 p-4 text-xl text-slate-50"
+              onClick={handleNav}
+            >
+              <Link href="/">Enterprise</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
