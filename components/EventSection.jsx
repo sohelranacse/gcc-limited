@@ -3,47 +3,78 @@ import Link from "next/link";
 import React from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import Events from "./Events";
+import { EventsData } from "./EventsData";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 function EventSection() {
   return (
     <section className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-medium text-slate-800 py-4">Events</h1>
-      <div>
-        <div className="flex flex-wrap justify-between">
-          <p className="text-sm leading-6 text-slate-800">
+
+      <CarouselProvider
+        className="lg:block hidden"
+        naturalSlideWidth={100}
+        isIntrinsicHeight={true}
+        totalSlides={EventsData.length}
+        visibleSlides={3.2}
+        step={1}
+        infinite={true}
+      >
+        <div className="flex flex-row justify-between py-6">
+          <p className="text-sm leading-6 text-slate-800 pr-4">
             Dive in to some new, exciting topics, or learn more about what our
             software has to offer.
             <br />
             Oh, and please let us know if you`d like to us to cover anything
             else.
           </p>
+
           <div className="flex justify-end text-slate-500">
-            <button type="button">
+            <ButtonBack>
               <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
-            </button>
-            <button type="button">
+            </ButtonBack>
+            <ButtonNext>
               <HiChevronRight className="border border-slate-300 h-7 w-7" />
-            </button>
+            </ButtonNext>
           </div>
         </div>
-      </div>
+
+        {/* slider area */}
+        <Slider>
+          {EventsData.map((event, index) => {
+            return (
+              <Slide key={index} className="border-r-[30px] border-white">
+                <Events
+                  key={index}
+                  heading={event.heading}
+                  location={event.location}
+                  image={event.image}
+                />
+              </Slide>
+            );
+          })}
+        </Slider>
+      </CarouselProvider>
+
       {/* Image */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-10 py-4">
-        <Events
-          heading="Yes you can: Build Your Success"
-          location="Online"
-          image="https://images.unsplash.com/photo-1615419235091-59bf9cbd530b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTY2fHxib29rJTIwY292ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-        />
-        <Events
-          heading="Yes you can: Build Your Success"
-          location="Greenwoods, NY"
-          image="https://images.unsplash.com/photo-1544736779-08492534e887?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGJvb2slMjBjb3ZlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        />
-        <Events
-          heading="Yes you can: Build Your Success"
-          location="Edinburgh, LN"
-          image="https://images.unsplash.com/photo-1555252586-d77e8c828e41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM1fHxib29rJTIwY292ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-        />
+      <div className="lg:hidden grid sm:grid-cols-1 md:grid-cols-3 gap-10 py-4">
+        {EventsData.map((event, index) => {
+          return (
+            <Events
+              key={index}
+              heading={event.heading}
+              location={event.location}
+              image={event.image}
+            />
+          );
+        })}
       </div>
 
       <div className="flex justify-center py-10">

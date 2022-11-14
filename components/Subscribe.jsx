@@ -3,7 +3,7 @@ import { RiArrowRightCircleLine } from "react-icons/ri";
 
 function Subscribe() {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-16 hidden lg:block">
       <div className="flex flex-wrap justify-between">
         {/* left */}
         <div className="md:w-1/2 sm:w-full">

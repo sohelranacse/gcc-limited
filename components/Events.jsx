@@ -23,7 +23,6 @@ function Events({ heading, location, image }) {
           </div>
 
           {/* title */}
-          <div className="absolute top-0 left-0 h-8 w-9 border-l-8 border-t-8 border-t-indigo-500 border-l-sky-500"></div>
           <div className="flex flex-wrap justify-between items-center">
             <h2 className="px-2 text-xl font-bold text-slate-700 w-4/5 group-hover:text-sky-600">
               {heading}

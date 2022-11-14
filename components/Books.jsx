@@ -7,7 +7,13 @@ function Books({ heading, tags, image }) {
   return (
     <Link href="/" className="group">
       <div className="my-4 relative">
-        <Image src={image} alt="" width={200} height={200} className="w-full" />
+        <Image
+          src={image}
+          alt="slider image"
+          width={200}
+          height={200}
+          className="w-full"
+        />
         {/* overlay */}
         <div className="absolute group-hover:bg-slate-900/30 top-0 left-0 h-full w-full shadow-sm ease-in duration-250"></div>
         {/* icon */}

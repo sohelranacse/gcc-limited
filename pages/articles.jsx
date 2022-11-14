@@ -6,6 +6,15 @@ import { FaRegEnvelope, FaMapMarkerAlt, FaRegBookmark } from "react-icons/fa";
 import Image from "next/image";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import RelatedArticles from "../components/RelatedArticles";
+import { BooksData } from "../components/BooksData";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 export default function articles() {
   return (
@@ -248,24 +257,63 @@ export default function articles() {
             <h1 className="text-2xl font-bold leading-6 text-slate-800">
               Related Insights
             </h1>
-            <div className="flex justify-end text-slate-500">
-              <button type="button">
-                <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
-              </button>
-              <button type="button">
-                <HiChevronRight className="border border-slate-300 h-7 w-7" />
-              </button>
-            </div>
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 py-8">
-              <RelatedArticles
-                heading="Yes you can: Build Your Success"
-                image="https://images.unsplash.com/photo-1544736779-08492534e887?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGJvb2slMjBjb3ZlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              />
-              <RelatedArticles
-                heading="A Guidbook to Hiring Freelancers"
-                image="https://images.unsplash.com/photo-1555252586-d77e8c828e41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM1fHxib29rJTIwY292ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              />
+            <CarouselProvider
+              className="lg:block hidden"
+              naturalSlideWidth={100}
+              isIntrinsicHeight={true}
+              totalSlides={BooksData.length}
+              visibleSlides={2.2}
+              step={1}
+              infinite={true}
+            >
+              <div className="flex flex-row justify-between py-6">
+                <p className="text-sm leading-6 text-slate-800 pr-4">
+                  Dive in to some new, exciting topics, or learn more about what
+                  our software has to offer.
+                  <br />
+                  Oh, and please let us know if you`d like to us to cover
+                  anything else.
+                </p>
+
+                <div className="flex justify-end text-slate-500">
+                  <ButtonBack>
+                    <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
+                  </ButtonBack>
+                  <ButtonNext>
+                    <HiChevronRight className="border border-slate-300 h-7 w-7" />
+                  </ButtonNext>
+                </div>
+              </div>
+
+              {/* slider area */}
+              <Slider>
+                {BooksData.map((book, index) => {
+                  return (
+                    <Slide
+                      key={index}
+                      className="py-4 border-r-[30px] border-white"
+                    >
+                      <RelatedArticles
+                        heading={book.heading}
+                        image={book.image}
+                      />
+                    </Slide>
+                  );
+                })}
+              </Slider>
+            </CarouselProvider>
+
+            <div className="lg:hidden grid sm:grid-cols-1 md:grid-cols-2 gap-10 py-8">
+              {BooksData.map((book, index) => {
+                return (
+                  <RelatedArticles
+                    key={index}
+                    heading={book.heading}
+                    image={book.image}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
