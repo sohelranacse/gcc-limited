@@ -3,14 +3,14 @@ import { RiArrowRightCircleLine } from "react-icons/ri";
 
 function Subscribe() {
   return (
-    <section className="container mx-auto px-4 py-16 hidden lg:block">
+    <section className="container mx-auto px-4 py-16">
       <div className="flex flex-wrap justify-between">
         {/* left */}
         <div className="md:w-1/2 sm:w-full">
           <p className="uppercase text-xl tracking-tight py-4">
             Collaborative work management
           </p>
-          <h1 className="font-medium md:text-7xl">Stay Connected</h1>
+          <h1 className="font-medium md:text-7xl text-4xl">Stay Connected</h1>
         </div>
 
         {/* right */}
@@ -22,8 +22,8 @@ function Subscribe() {
             lorem Ipsum has been the industry`s standard dummy text ever since
             the 1500s.
           </p>
-          <form className="flex flex-wrap py-6 justify-center gap-0">
-            <p className="uppercase text-lg font-medium text-slate-900 pr-2">
+          <form className="flex flex-wrap py-6 justify-start gap-0">
+            <p className="uppercase text-lg font-medium text-slate-900 pr-2 md:pb-0 pb-4">
               Subscribe now
             </p>
             <input

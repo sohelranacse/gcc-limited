@@ -63,19 +63,50 @@ function EventSection() {
         </Slider>
       </CarouselProvider>
 
-      {/* Image */}
-      <div className="lg:hidden grid sm:grid-cols-1 md:grid-cols-3 gap-10 py-4">
-        {EventsData.map((event, index) => {
-          return (
-            <Events
-              key={index}
-              heading={event.heading}
-              location={event.location}
-              image={event.image}
-            />
-          );
-        })}
-      </div>
+      <CarouselProvider
+        className="lg:hidden"
+        naturalSlideWidth={100}
+        isIntrinsicHeight={true}
+        totalSlides={EventsData.length}
+        visibleSlides={1.1}
+        step={1}
+        infinite={true}
+      >
+        <div className="flex flex-row justify-between py-6">
+          <p className="text-sm leading-6 text-slate-800 pr-4">
+            Dive in to some new, exciting topics, or learn more about what our
+            software has to offer.
+            <br />
+            Oh, and please let us know if you`d like to us to cover anything
+            else.
+          </p>
+
+          <div className="flex justify-end text-slate-500">
+            <ButtonBack>
+              <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
+            </ButtonBack>
+            <ButtonNext>
+              <HiChevronRight className="border border-slate-300 h-7 w-7" />
+            </ButtonNext>
+          </div>
+        </div>
+
+        {/* slider area */}
+        <Slider>
+          {EventsData.map((event, index) => {
+            return (
+              <Slide key={index} className="border-r-[30px] border-white">
+                <Events
+                  key={index}
+                  heading={event.heading}
+                  location={event.location}
+                  image={event.image}
+                />
+              </Slide>
+            );
+          })}
+        </Slider>
+      </CarouselProvider>
 
       <div className="flex justify-center py-10">
         <Link

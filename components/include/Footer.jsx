@@ -78,6 +78,7 @@ function Footer() {
                 Subscribe to Newsletter
               </button>
             </div>
+
             <input
               type="checkbox"
               id="checkbox-1"
