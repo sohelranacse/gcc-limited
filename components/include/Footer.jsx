@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+
+import { FaRegEnvelope } from "react-icons/fa";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -73,9 +75,15 @@ function Footer() {
 
               <button
                 type="button"
-                className="border border-blue-400 text-slate-100 px-4 py-2 uppercase bg-blue-400 text-xs font-bold w-[35%]"
+                className="border border-blue-400 text-slate-100 px-4 py-2 uppercase bg-blue-400 text-xs font-bold w-[35%] lg:block hidden"
               >
                 Subscribe to Newsletter
+              </button>
+              <button
+                type="button"
+                className="border border-blue-400 text-slate-100 px-4 py-2 uppercase bg-blue-400 text-xs font-bold w-[35%]"
+              >
+                <FaRegEnvelope />
               </button>
             </div>
 
