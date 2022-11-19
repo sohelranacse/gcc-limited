@@ -259,11 +259,11 @@ export default function articles() {
             </h1>
 
             <CarouselProvider
-              className="lg:block hidden"
+              className="lg:block md:block hidden"
               naturalSlideWidth={100}
               isIntrinsicHeight={true}
               totalSlides={BooksData.length}
-              visibleSlides={2.2}
+              visibleSlides={1.9}
               step={1}
               infinite={true}
             >
@@ -305,7 +305,7 @@ export default function articles() {
             </CarouselProvider>
 
             <CarouselProvider
-              // className="lg:block hidden"
+              className="lg:hidden md:hidden"
               naturalSlideWidth={100}
               isIntrinsicHeight={true}
               totalSlides={BooksData.length}
@@ -333,7 +333,7 @@ export default function articles() {
               </div>
 
               {/* slider area */}
-              <div className="lg:hidden grid sm:grid-cols-1 md:grid-cols-2 gap-10 py-8">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 py-8">
                 <Slider>
                   {BooksData.map((book, index) => {
                     return (

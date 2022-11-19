@@ -19,11 +19,11 @@ function EventSection() {
       <h1 className="text-4xl font-medium text-slate-800 py-4">Events</h1>
 
       <CarouselProvider
-        className="lg:block hidden"
+        className="lg:block md:block hidden"
         naturalSlideWidth={100}
         isIntrinsicHeight={true}
         totalSlides={EventsData.length}
-        visibleSlides={3.2}
+        visibleSlides={2.9}
         step={1}
         infinite={true}
       >
@@ -64,7 +64,7 @@ function EventSection() {
       </CarouselProvider>
 
       <CarouselProvider
-        className="lg:hidden"
+        className="lg:hidden md:hidden"
         naturalSlideWidth={100}
         isIntrinsicHeight={true}
         totalSlides={EventsData.length}

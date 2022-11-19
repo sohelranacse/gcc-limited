@@ -19,11 +19,11 @@ function BooksSection() {
       </h1>
 
       <CarouselProvider
-        className="lg:block hidden"
+        className="lg:block md:block hidden"
         naturalSlideWidth={100}
         isIntrinsicHeight={true}
         totalSlides={BooksData.length}
-        visibleSlides={3.2}
+        visibleSlides={2.9}
         step={1}
         infinite={true}
       >
@@ -62,7 +62,7 @@ function BooksSection() {
         </Slider>
       </CarouselProvider>
       <CarouselProvider
-        className="lg:hidden"
+        className="lg:hidden md:hidden"
         naturalSlideWidth={100}
         isIntrinsicHeight={true}
         totalSlides={BooksData.length}
