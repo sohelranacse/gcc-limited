@@ -14,7 +14,7 @@ function Header() {
   };
 
   return (
-    <nav className="w-full fixed top-0 bg-white z-10">
+    <nav className="w-full fixed top-0 bg-white z-10 shadow-md">
       <div className="container p-5 mx-auto py-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/">
@@ -27,45 +27,35 @@ function Header() {
             />
           </Link>
           <ul className="hidden md:flex space-x-5 text-gray-700 font-[600] text-sm uppercase ml-20 tracking-tighter">
-            <li>
-              <Link
-                href="/"
-                className="hover:text-gray-500 border-solid border-b-4 border-blue-700 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-linear duration-100"
-              >
+            <li className="relative group">
+              <Link href="/" className="hover:text-gray-500 pb-2">
                 Company
               </Link>
+              <span className="absolute left-0 right-0 top-6 border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-full inline-block"></span>
             </li>
-            <li>
-              <Link
-                href="/articles"
-                className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-linear duration-100 "
-              >
+            <li className="relative group">
+              <Link href="/articles" className="hover:text-gray-500 pb-2">
                 Articles
               </Link>
+              <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
             </li>
-            <li>
-              <Link
-                href="/"
-                className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-liner duration-100"
-              >
+            <li className="relative group">
+              <Link href="/articles" className="hover:text-gray-500 pb-2">
                 Pricing
               </Link>
+              <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
             </li>
-            <li>
-              <Link
-                href="/"
-                className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-liner duration-100"
-              >
+            <li className="relative group">
+              <Link href="/articles" className="hover:text-gray-500 pb-2">
                 Resources
               </Link>
+              <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
             </li>
-            <li>
-              <Link
-                href="/"
-                className="hover:text-gray-500 pb-2 hover:border-solid hover:border-b-4 hover:border-blue-700 ease-linear duration-100"
-              >
+            <li className="relative group">
+              <Link href="/articles" className="hover:text-gray-500 pb-2">
                 Enterprise
               </Link>
+              <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
             </li>
           </ul>
         </div>

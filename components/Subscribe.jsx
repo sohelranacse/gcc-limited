@@ -22,16 +22,18 @@ function Subscribe() {
             lorem Ipsum has been the industry`s standard dummy text ever since
             the 1500s.
           </p>
-          <form className="flex flex-wrap py-6 justify-start gap-0">
+          <form className="flex flex-wrap py-6 justify-between gap-0">
             <p className="uppercase text-lg font-medium text-slate-900 pr-2 md:pb-0 pb-4">
               Subscribe now
             </p>
-            <input
-              type="email"
-              placeholder="Enter email"
-              className="border-b-2 border-solid appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer w-2/3"
-              required
-            />
+            <div className="md:w-2/3 w-[90%]">
+              <input
+                type="email"
+                placeholder="Enter email"
+                className="w-full border-b-2 border-solid appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                required
+              />
+            </div>
             <button type="submit" className="text-3xl">
               <RiArrowRightCircleLine className="text-slate-600" />
             </button>

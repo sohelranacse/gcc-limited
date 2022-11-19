@@ -28,7 +28,7 @@ function Footer() {
               Inspiring the world through change.
             </p>
           </div>
-          <div className="py-6 flex flex-wrap items-center justify-between">
+          <div className="py-6 flex flex-grow gap-2 justify-between">
             <div>
               <h4 className="text-lg text-slate-100">Get our newsletter</h4>
               <p className="text-xs text-slate-300 py-4">
@@ -65,7 +65,7 @@ function Footer() {
             </ul>
           </div>
           <div className="">
-            <div className="pb-4 flex flex-wrap">
+            <form className="pb-4 flex flex-wrap">
               <input
                 type="email"
                 className="w-[65%] py-[0.40rem] px-0 text-slate-100 text-sm bg-transparent border-0 border-b border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -74,18 +74,18 @@ function Footer() {
               />
 
               <button
-                type="button"
+                type="submit"
                 className="border border-blue-400 text-slate-100 px-4 py-2 uppercase bg-blue-400 text-xs font-bold w-[35%] lg:block hidden"
               >
                 Subscribe to Newsletter
               </button>
               <button
-                type="button"
-                className="border border-blue-400 text-slate-100 px-4 py-2 uppercase bg-blue-400 text-xs font-bold w-[35%]"
+                type="submit"
+                className="border border-blue-400 text-slate-100 px-4 py-2 uppercase bg-blue-400 text-xs font-bold w-[35%] lg:hidden"
               >
-                <FaRegEnvelope />
+                <FaRegEnvelope className="text-center w-full" />
               </button>
-            </div>
+            </form>
 
             <input
               type="checkbox"

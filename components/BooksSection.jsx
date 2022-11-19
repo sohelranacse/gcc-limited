@@ -66,7 +66,7 @@ function BooksSection() {
         naturalSlideWidth={100}
         isIntrinsicHeight={true}
         totalSlides={BooksData.length}
-        visibleSlides={1.1}
+        visibleSlides={1}
         step={1}
         infinite={true}
       >
@@ -93,7 +93,7 @@ function BooksSection() {
         <Slider>
           {BooksData.map((book, index) => {
             return (
-              <Slide key={index} className="py-4 border-r-[30px] border-white">
+              <Slide key={index}>
                 <Books
                   heading={book.heading}
                   tags={book.tags}

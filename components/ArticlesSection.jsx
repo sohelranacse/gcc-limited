@@ -8,7 +8,7 @@ function Articles() {
     <section className="container mx-auto px-4 py-16">
       <div className="grid md:grid-cols-3 sm:col-span-2 gap-6">
         {/* Image */}
-        <div className="md:col-span-2 sm:col-span-1 mr-6">
+        <div className="md:col-span-2 sm:col-span-1 md:mr-6">
           <Image
             src="https://images.unsplash.com/photo-1602823284936-463177448097?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             width="800"

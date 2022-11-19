@@ -68,7 +68,7 @@ function EventSection() {
         naturalSlideWidth={100}
         isIntrinsicHeight={true}
         totalSlides={EventsData.length}
-        visibleSlides={1.1}
+        visibleSlides={1}
         step={1}
         infinite={true}
       >
@@ -95,7 +95,7 @@ function EventSection() {
         <Slider>
           {EventsData.map((event, index) => {
             return (
-              <Slide key={index} className="border-r-[30px] border-white">
+              <Slide key={index}>
                 <Events
                   key={index}
                   heading={event.heading}

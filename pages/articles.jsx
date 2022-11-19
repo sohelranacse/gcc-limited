@@ -84,7 +84,7 @@ export default function articles() {
             {/* blockcote */}
 
             <div className="flex flex-wrap justify-between py-12">
-              <blockquote className="pl-4 my-4 border-l-4 border-sky-500 md:basis-1/2">
+              <blockquote className="pl-4 my-6 border-l-4 border-sky-500 md:basis-1/2">
                 <h2 className="text-sky-500 font-bold text-2xl pb-2">
                   Summary
                 </h2>
@@ -304,17 +304,50 @@ export default function articles() {
               </Slider>
             </CarouselProvider>
 
-            <div className="lg:hidden grid sm:grid-cols-1 md:grid-cols-2 gap-10 py-8">
-              {BooksData.map((book, index) => {
-                return (
-                  <RelatedArticles
-                    key={index}
-                    heading={book.heading}
-                    image={book.image}
-                  />
-                );
-              })}
-            </div>
+            <CarouselProvider
+              // className="lg:block hidden"
+              naturalSlideWidth={100}
+              isIntrinsicHeight={true}
+              totalSlides={BooksData.length}
+              visibleSlides={1}
+              step={1}
+              infinite={true}
+            >
+              <div className="flex flex-row justify-between py-6">
+                <p className="text-sm leading-6 text-slate-800 pr-4">
+                  Dive in to some new, exciting topics, or learn more about what
+                  our software has to offer.
+                  <br />
+                  Oh, and please let us know if you`d like to us to cover
+                  anything else.
+                </p>
+
+                <div className="flex justify-end text-slate-500">
+                  <ButtonBack>
+                    <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
+                  </ButtonBack>
+                  <ButtonNext>
+                    <HiChevronRight className="border border-slate-300 h-7 w-7" />
+                  </ButtonNext>
+                </div>
+              </div>
+
+              {/* slider area */}
+              <div className="lg:hidden grid sm:grid-cols-1 md:grid-cols-2 gap-10 py-8">
+                <Slider>
+                  {BooksData.map((book, index) => {
+                    return (
+                      <Slide key={index}>
+                        <RelatedArticles
+                          heading={book.heading}
+                          image={book.image}
+                        />
+                      </Slide>
+                    );
+                  })}
+                </Slider>
+              </div>
+            </CarouselProvider>
           </div>
         </div>
       </section>
