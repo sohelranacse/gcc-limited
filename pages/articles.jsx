@@ -278,10 +278,10 @@ export default function articles() {
 
                 <div className="flex justify-end text-slate-500">
                   <ButtonBack>
-                    <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
+                    <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7 hover:bg-slate-100 ease-linear duration-100" />
                   </ButtonBack>
                   <ButtonNext>
-                    <HiChevronRight className="border border-slate-300 h-7 w-7" />
+                    <HiChevronRight className="border border-slate-300 h-7 w-7 hover:bg-slate-100 ease-linear duration-100" />
                   </ButtonNext>
                 </div>
               </div>
@@ -324,10 +324,10 @@ export default function articles() {
 
                 <div className="flex justify-end text-slate-500">
                   <ButtonBack>
-                    <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7" />
+                    <HiChevronLeft className="border border-slate-300 mr-2 h-7 w-7 hover:bg-slate-100 ease-linear duration-100" />
                   </ButtonBack>
                   <ButtonNext>
-                    <HiChevronRight className="border border-slate-300 h-7 w-7" />
+                    <HiChevronRight className="border border-slate-300 h-7 w-7 hover:bg-slate-100 ease-linear duration-100" />
                   </ButtonNext>
                 </div>
               </div>

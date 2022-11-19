@@ -40,7 +40,7 @@ function Header() {
               <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
             </li>
             <li className="relative group">
-              <Link href="/articles" className="hover:text-gray-500 pb-2">
+              <Link href="/" className="hover:text-gray-500 pb-2">
                 Pricing
               </Link>
               <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
@@ -52,7 +52,7 @@ function Header() {
               <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
             </li>
             <li className="relative group">
-              <Link href="/articles" className="hover:text-gray-500 pb-2">
+              <Link href="/" className="hover:text-gray-500 pb-2">
                 Enterprise
               </Link>
               <span className="absolute left-0 right-0 top-6 group-hover:border-b-4 border-b-1 ease-out duration-200 border-sky-700 w-0 group-hover:w-full inline-block"></span>
@@ -124,7 +124,7 @@ function Header() {
               className="hover:text-gray-500 p-4 text-xl text-slate-50"
               onClick={handleNav}
             >
-              <Link href="/">Resources</Link>
+              <Link href="/articles">Resources</Link>
             </li>
             <li
               className="hover:text-gray-500 p-4 text-xl text-slate-50"
